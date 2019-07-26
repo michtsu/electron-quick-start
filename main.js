@@ -66,7 +66,7 @@ function buildSharedWorkerMenuOptions(focusedWindow) {
       sharedWorkers.forEach((sharedWorker) => {
         console.log('Appending menu item for shared worker ' + sharedWorker.url);
         sharedWorkerMenu.push({
-          label: 'Debug shared worker ' + sharedWorker.id,
+          label: 'Debug shared worker ' + sharedWorker.url,
           click (item, focusedWindow) {
             focusedWindow.webContents.inspectSharedWorkerById(sharedWorker.id)
           }      
